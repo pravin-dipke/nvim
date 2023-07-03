@@ -31,6 +31,7 @@ return require('packer').startup(function(use)
   -- Undo tree
   use('mbbill/undotree')
 
+  -- For Split Terminal
   use {"akinsho/toggleterm.nvim", tag = '*', config = function()
     require("toggleterm").setup()
   end}
