@@ -32,6 +32,7 @@ vim.opt.signcolumn = "yes"
 
 vim.g.mapleader = " "
 
-
-
-
+--for formatoptions fo-table, whenever i typing comments if i hit enter the comments still continue to stop that this remap is use
+--for reference read https://vi.stackexchange.com/questions/1983/how-can-i-get-vim-to-stop-putting-comments-in-front-of-new-lines?newreg=8ea07b0f8a4d40afaeecdb3260bc24db
+--:help fo-table
+--/opt/homebrew/Cellar/neovim/0.9.1/share/nvim/runtime/ftplugin/java.vim line 31 -- this file was changed for enable remap
