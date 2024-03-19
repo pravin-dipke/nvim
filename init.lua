@@ -1,9 +1,1 @@
 require("itspravin")
-
-
-
-
-
-
-:w
-
