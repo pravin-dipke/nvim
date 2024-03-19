@@ -31,6 +31,11 @@ return require("packer").startup(function(use)
 		end,
 	})
 
+	-- auto closing
+	-- use("nvim-treesitter/nvim-treesitter", { run = ":TSUpdate" })
+	use("windwp/nvim-autopairs") -- autoclose parens, brackets, quotes, etc...
+	use({ "windwp/nvim-ts-autotag", after = "nvim-treesitter" }) -- autoclose tags
+
 	use("rebelot/kanagawa.nvim")
 	use("mbbill/undotree")
 	use({
@@ -94,4 +99,7 @@ return require("packer").startup(function(use)
 	use("L3MON4D3/LuaSnip") -- snippet engine
 	use("saadparwaiz1/cmp_luasnip") -- for autocompletion
 	use("rafamadriz/friendly-snippets") -- useful snippets
+
+	-- git integration
+	use("lewis6991/gitsigns.nvim") -- show line modifications on left hand side
 end)
