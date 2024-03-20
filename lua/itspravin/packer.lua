@@ -102,4 +102,7 @@ return require("packer").startup(function(use)
 
 	-- git integration
 	use("lewis6991/gitsigns.nvim") -- show line modifications on left hand side
+
+	-- Extensions for the built-in Language Server Protocol
+	use("mfussenegger/nvim-jdtls")
 end)
