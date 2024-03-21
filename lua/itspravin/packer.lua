@@ -113,4 +113,10 @@ return require("packer").startup(function(use)
 
 	-- Extensions for the built-in Language Server Protocol
 	use("mfussenegger/nvim-jdtls")
+
+	--for Statusline
+	use({
+		"nvim-lualine/lualine.nvim",
+		requires = { "nvim-tree/nvim-web-devicons", opt = true },
+	})
 end)
