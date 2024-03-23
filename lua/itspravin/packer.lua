@@ -113,6 +113,7 @@ return require("packer").startup(function(use)
 
 	-- Extensions for the built-in Language Server Protocol
 	use("mfussenegger/nvim-jdtls")
+	use("mfussenegger/nvim-dap")
 
 	--for Statusline
 	use({
