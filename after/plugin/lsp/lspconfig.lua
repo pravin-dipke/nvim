@@ -68,6 +68,7 @@ lspconfig["cssls"].setup({
 	on_attach = on_attach,
 })
 
+-- configure java server
 lspconfig["jdtls"].setup({
 	on_attach = on_attach,
 	capabilities = capabilities,
