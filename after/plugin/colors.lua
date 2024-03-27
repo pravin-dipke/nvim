@@ -1,9 +1,9 @@
-require("kanagawa").setup({
+require("nightfox").setup({
 	disable_background = true,
 })
 
 function ColorMyPencils(color)
-	color = color or "kanagawa"
+	color = color or "nightfox"
 	vim.cmd.colorscheme(color)
 
 	--vim.api.nvim_set_hl(0, "nvim_set_hlNormal", { bg = "none" })

@@ -12,6 +12,31 @@ local root_dir = require("jdtls.setup").find_root(root_markers)
 -- current project found using the root_marker as the folder for project specific data.
 local workspace_folder = home .. "/.local/share/eclipse/" .. vim.fn.fnamemodify(root_dir, ":p:h:t")
 
+-- Debugging Settings
+local HOME = os.getenv("HOME")
+-- Debugger installation location
+local DEBUGGER_LOCATION = HOME .. "/.local/share/nvim"
+
+-- Debugging
+local bundles = {
+	vim.fn.glob(
+		DEBUGGER_LOCATION .. "/Users/PravinDipke/Downloads/java-debug/com.microsoft.java.debug.plugin/target/*.jar"
+	),
+}
+vim.list_extend(
+	bundles,
+	vim.split(vim.fn.glob(DEBUGGER_LOCATION .. "/Users/PravinDipke/Downloads/vscode-java-test/server/*.jar"), "\n")
+)
+
+-- lconfig.lspocal config = {
+-- 	on_attach = require("").on_attach,
+--
+-- 	-- If you don't plan on using the debugger or other eclipse.jdt.ls plugins you can remove this
+-- 	init_options = {
+-- 		bundles = bundles,
+-- 	},
+-- }
+
 -- Helper function for creating keymaps
 function nnoremap(rhs, lhs, bufopts, desc)
 	bufopts.desc = desc

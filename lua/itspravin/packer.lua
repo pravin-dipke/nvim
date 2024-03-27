@@ -16,11 +16,14 @@ return require("packer").startup(function(use)
 	use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" }) -- dependency for better sorting performance
 	--use({ "nvim-telescope/telescope.nvim", branch = "0.1.x" }) -- fuzzy finder
 
+	-- Colorscheme
 	--use { 'rose-pine/neovim', as = 'rose-pine', config = function()
 	--vim.cmd('colorscheme rose-pine')
 	--end
 	--}
 	--use { "catppuccin/nvim", as = "catppuccin" }
+	--use("rebelot/kanagawa.nvim")
+	use("EdenEast/nightfox.nvim")
 
 	-- treesitter configuration
 	use({
@@ -114,6 +117,20 @@ return require("packer").startup(function(use)
 	-- Extensions for the built-in Language Server Protocol
 	use("mfussenegger/nvim-jdtls")
 	use("mfussenegger/nvim-dap")
+
+	--Which-key
+	use({
+		"folke/which-key.nvim",
+		config = function()
+			vim.o.timeout = true
+			vim.o.timeoutlen = 300
+			require("which-key").setup({
+				-- your configuration comes here
+				-- or leave it empty to use the default settings
+				-- refer to the configuration section below
+			})
+		end,
+	})
 
 	--for Statusline
 	use({
